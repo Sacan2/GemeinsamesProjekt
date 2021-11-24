@@ -51,7 +51,6 @@ public class Gameplay {
                 case "Schwertkämpfer","s"  -> {
 
                     if (!istCharakterBereitsAusgewaehlt(AusgewaehlteCharakter)){
-
                         System.out.println("Der Schwertkämpfer Status:");
                         System.out.println("Die Anzahl an Herzen " +ANSI_RED+ Aragon.Herze+ANSI_RESET);
                         System.out.println("Der Schaden pro Angriff " + Aragon.schaden);
@@ -70,8 +69,6 @@ public class Gameplay {
 
                 case "Magier","m" -> {
                     if (!istCharakterBereitsAusgewaehlt(AusgewaehlteCharakter)){
-
-
                         System.out.println("Der Magier Status:");
                         System.out.println("Die Anzahl an Herzen "+ANSI_RED+Gandalf.Herze+ANSI_RESET);
                         System.out.println("Der Schaden pro Angriff "+Gandalf.schaden);
@@ -91,7 +88,6 @@ public class Gameplay {
 
                 case "Bogenschütze","b" -> {
                     if (!istCharakterBereitsAusgewaehlt(AusgewaehlteCharakter)){
-
                         System.out.println("Der Bogenschütze Status:");
                         System.out.println("Die Anzahl an Herzen "+ANSI_RED +Legolas.Herze+ANSI_RESET);
                         System.out.println("Der Scchaden Pro Angriff "+Legolas.schaden);
@@ -104,17 +100,13 @@ public class Gameplay {
                     if (bestaetigenfuerchamp.equals("y") ) {
                         AusgewaehlteCharakter=Legolas;
                         AnfangStory();
-
                     }
-
-
                 }
                 case "EXIT","exit" -> {
                     System.out.println("YOU DIED!");
                     Spielstarten = false;
                 }
                 case "help" -> System.out.println("Mit 'EXIT' wird das Spiel beendet ");
-
                 default -> System.out.println(ANSI_RED+"'"+ Antwort+"'" +"  ist keine Eingabe die angenommen werden kann bitte wiederholen oder Spiel verlassen!"+ANSI_RESET);
             }
             if (Aragon.Herze==0||Gandalf.Herze==0||Legolas.Herze==0){
@@ -123,11 +115,8 @@ public class Gameplay {
                 System.out.println("Du hat keine Herzen mehr!");
                 System.exit(0);
             }
-
         }
-
     }
-
 
     //Methoden benutzen um die Story zu schreiben, um es afu jeden Charakter zu benutzen
     public boolean istCharakterBereitsAusgewaehlt (Spielcharakter AusgewaehlterCharakter) {
@@ -141,7 +130,6 @@ public class Gameplay {
     }
 
     public void AnfangStory(){
-
 
         System.out.println(ANSI_PURPLE+"Die Leere bahnte sich mit der Entstehung des Universums ihren Weg in die Existenz und ist die Manifestation des unergründlichen Nichts,");
         System.out.println("das dahinter liegt. Sie ist eine Kraft voller unstillbarem Verlangen, die Äonen lang wartet,bis ihre Meister, die mysteriösen Wächter,");
@@ -159,7 +147,6 @@ public class Gameplay {
         else if (ErsteEntscheidung.equals("l")){
             inVoidbleiben();
         }
-
     }
     //Passiert wenn man im Void bleiben
     public void inVoidbleiben(){
@@ -187,7 +174,7 @@ public class Gameplay {
 
         System.out.println("Das Mädchen konnte gerettet werden, jedoch hat dich, dass Wesen verletzt und ist weggelaufen!!");
         AusgewaehlteCharakter.Herze--;
-        System.out.println("Deine Übriggebliebenen Herze: "+ANSI_RED+AusgewaehlteCharakter.Herze+ANSI_RESET);
+        System.out.println("Deine übriggebliebenen Herze: "+ANSI_RED+AusgewaehlteCharakter.Herze+ANSI_RESET);
         System.out.println(ANSI_BLUE+"Das Kleine Mädchen:");
         System.out.println("Danke, dass du mich gerettet hast."+ANSI_RESET);
 
@@ -196,8 +183,6 @@ public class Gameplay {
         System.out.println("b) Wie bist du hierher gekommen?");
         System.out.println("c) Wo sind deine Eltern?");
         System.out.println("d) Geht es dir gut? bist du irgendwo verletzt?"+ANSI_RESET);
-
-
 
 
         String MaedchenFragenABCD = Eingabe.nextLine();
@@ -217,7 +202,7 @@ public class Gameplay {
                                                 case "a" -> {
 
                                                     System.out.println(ANSI_PURPLE+"Du kannst deine Herzen verwenden, um andere zu heilen, indem du 'h' eintippst.");
-                                                    System.out.println("Als Magier kann, ebenfalls das Mana verwendet werden, indem du 'ma' eintippst !"+ANSI_RESET);
+                                                    System.out.println("Als Magier kannst du, ebenfalls das Mana verwendet werden, indem du 'ma' eintippst !"+ANSI_RESET);
 
                                                     String MaedchenHeilen = Eingabe.nextLine();
 
@@ -266,7 +251,7 @@ public class Gameplay {
                                                 case "a" -> {
 
                                                     System.out.println(ANSI_PURPLE+"Du kannst deine Herzen verwenden, um andere zu heilen, indem du 'h' eintippst.");
-                                                    System.out.println("Als Magier kann, ebenfalls das Mana verwendet werden, indem du 'ma' eintippst !"+ANSI_RESET);
+                                                    System.out.println("Als Magier kannst du, ebenfalls das Mana verwendet werden, indem du 'ma' eintippst !"+ANSI_RESET);
 
                                                     String MaedchenHeilen = Eingabe.nextLine();
 
@@ -328,7 +313,7 @@ public class Gameplay {
                                                     case "a" -> {
 
                                                         System.out.println(ANSI_PURPLE+"Du kannst deine Herzen verwenden, um andere zu heilen, indem du 'h' eintippst.");
-                                                        System.out.println("Als Magier kann, ebenfalls das Mana verwendet werden, indem du 'ma' eintippst !"+ANSI_RESET);
+                                                        System.out.println("Als Magier kannst du, ebenfalls das Mana verwendet werden, indem du 'ma' eintippst !"+ANSI_RESET);
 
                                                         String MaedchenHeilen = Eingabe.nextLine();
 
@@ -364,9 +349,9 @@ public class Gameplay {
 
                     }
                     case "d" ->{
-                                                        System.out.println("Mein Bein tut weh ich habe mich geschnitten beim hinfallen"+ANSI_RESET);
+                                                        System.out.println(ANSI_BLUE+"Mein Bein tut weh ich habe mich geschnitten beim hinfallen"+ANSI_RESET);
                                                         System.out.println(ANSI_PURPLE+"Du kannst deine Herzen verwenden, um andere zu heilen, indem du 'h' eintippst.");
-                                                        System.out.println("Als Magier kann, ebenfalls das Mana verwendet werden, indem du 'ma' eintippst !"+ANSI_RESET);
+                                                        System.out.println("Als Magier kannst du, ebenfalls das Mana verwendet werden, indem du 'ma' eintippst !"+ANSI_RESET);
 
                                                         String MaedchenHeilen = Eingabe.nextLine();
 
@@ -376,29 +361,119 @@ public class Gameplay {
                                                             VoidStoryMitMaedchen();
                                                         }
 
-
                                                         if (MaedchenHeilen.equals("ma")&&AusgewaehlteCharakter==Gandalf){
                                                             Gandalf.Mana--;
                                                             System.out.println(ANSI_BLUE+"Deine übriggebliebenes Mana: "+Gandalf.Mana+ANSI_RESET);
                                                             VoidStoryMitMaedchen();
                                                         }
-
-
                     }
                     default ->  System.out.println( ANSI_RED+MaedchenFragenABCD+" Das ist keine Angabe die angenommen werden kann"+ANSI_RESET);
                 }
     }
     //Void Story fortsetzen
     public void VoidStoryMitMaedchen(){
-        System.out.println(ANSI_PURPLE+"Die Story geht mit dem Mädchen weiter"+ANSI_RESET);
+        System.out.println(ANSI_PURPLE+"5 Stunden vergingen seit der Begennung von Kai'sa. Auf dem Weg wurde nur allerlei Gegenstände, unterandrem eine Waffe und Lebensmittel. ");
+        System.out.println("Nach Stundenlanger Suche nach Zivilisation, stehst du wieder vor einer Entscheidung. Es ist eine Hölle mit einem Duft von Zimt der Verlockend ist.");
+        System.out.println("Jedoch ist auf dem selben Weg ein Turm der auf der Spitze ein helles gelbes Licht. Ähnlich wie, dass als du aufgewacht bist."+ANSI_RESET);
+        System.out.println(ANSI_CYAN+"a) Die Hölle betretten");
+        System.out.println("b) Den Turm betretten"+ANSI_RESET);
+        String EntscheideFuerDieHoelleOderTurm = Eingabe.nextLine();
+        switch (EntscheideFuerDieHoelleOderTurm){
+            case "a" -> VoidStoryMitMaedchenInDerHoelle();
+            case "b" -> VoidStoryMitMaedchenInDemTurm();
+
+        }
     }
 
     public void VoidStoryOhneMaedchen(){
         System.out.println(ANSI_PURPLE+"Story ohne das Mädchen!"+ANSI_RESET);
 
     }
+    //Höllen Story
+    public void VoidStoryMitMaedchenInDerHoelle(){
+        System.out.println(ANSI_PURPLE+"Je tiefer man in die Hölle ging desto stärker wurde der Zimt geruch. Zur selben Zeit klammerte sich Kai'sa um deinen rechten Arm.");
+        System.out.println("Das Gefühl beobachtet zu werden wurde mit jedem Schritt den man fortsetze immer stärker. Jedoch war der Drang herauszufinden woher der Duft kam überlegen.");
+        System.out.println("Auf dem Weg Springt, das Lila farbige, dass weglaufen ist hervor. Es ist immernoch Stark verletzt von dem Kampf und nicht mehr in der Lage sich zu verteidigen"+ANSI_RESET);
+        System.out.println(ANSI_CYAN+"a) Das Wesen Töten");
+        System.out.println("b) Es Verletzt lassen und vorbei gehen");
+        System.out.println("h) Es heilen");
+        String HoelleMitMaedchenErsteEntscheidung = Eingabe.nextLine();
+        switch (HoelleMitMaedchenErsteEntscheidung){
+            case "a" -> VoidStoryMitMaedchenWesenToeten();
+            case "b" -> HoelleDenTrankWegSchmeißen();
+            case "h" -> HoelleWesenRetten();
+        }
+    }
+
+    public void VoidStoryMitMaedchenWesenToeten(){
+        System.out.println(ANSI_PURPLE+"Das Wesen war so schwach, dass es nur einen Schlag benötigt hat um zu sterben. Jedoch hatte es einen Gegenstand im Mund.");
+        System.out.println("Eine Flasche mit roter Flüßigkeit, die einen süßen Duft von sich gibt. Sie wurde aber beschädigt, dadurch, dass das Wesen während des Sterbens");
+        System.out.println("drauf gebissen hat.");
+        System.out.println(ANSI_CYAN+"a) Den Trank trinken");
+        System.out.println("b) Das Mädchen Trinken lassen");
+        System.out.println("c) Den Trank wegschmeißen"+ANSI_RESET);
+        String HoelleMitMaedchenWesenTotGetrank =  Eingabe.nextLine();
+        switch (HoelleMitMaedchenWesenTotGetrank){
+            case "a" -> HoelleTrankTrinkenSpieler();
+            case "b" -> HoelleTrabkDasMaedchenTrinkenLassen();
+            case "c" -> HoelleDenTrankWegSchmeißen();
+
+        }
+    }
+    public void HoelleTrankTrinkenSpieler(){
+        System.out.println(ANSI_PURPLE+"Der Trank konnte zwei Herzen wieder auffüllen");
+        AusgewaehlteCharakter.Herze=AusgewaehlteCharakter.Herze+2;
+        System.out.println(ANSI_PURPLE+"Deine Übriggeblibene Herze "+ANSI_RESET+ANSI_RED+AusgewaehlteCharakter.Herze+ANSI_RESET);
+        HoelleDenTrankWegSchmeißen();
+    }
+    public void HoelleTrabkDasMaedchenTrinkenLassen(){
+        System.out.println(ANSI_PURPLE+"Kai'sa hat sich komplett wieder geheilt. Ihre Wunde hat sich in Sekunden geheilt"+ANSI_RESET);
+        HoelleDenTrankWegSchmeißen();
+    }
+    public void HoelleDenTrankWegSchmeißen(){
+        System.out.println(ANSI_PURPLE+"Ein Gelbes Licht Sorgte dafür, dass sich Kai'sa erschreckt hat. Es ist das selbe Portal wie als du aufgewacht bist.");
+        System.out.println("Es ist immernoch nicht klar wer du bist, woher du kommst, genau so wie, die andere Seite des Portals. Kai'sa wird dahin gehen wo du gehst."+ANSI_RESET);
+        System.out.println(ANSI_CYAN+"p) Das Portal betretten");
+        System.out.println("z) zum Türm zurück gehen");
+        String HoelleEndeProtalEntscheidung = Eingabe.nextLine();
+        switch (HoelleEndeProtalEntscheidung){
+            case "p" -> Targonbetreten();
+            case "z" -> VoidStoryMitMaedchenInDemTurm();
+        }
+
+    }
+    public void HoelleWesenRetten(){
+        AusgewaehlteCharakter.Herze--;
+        System.out.println(ANSI_PURPLE+"Deine übriggebliebenen Herze "+ANSI_RESET+ANSI_RED+AusgewaehlteCharakter.Herze+ANSI_RESET);
+        System.out.println(ANSI_PURPLE+"Das Wesen ist überraschend nett nachdem es gerettet worden ist. Fängt an sich zu bendanken, indem es deine und Kai'sa wunden Heilt"+ANSI_RESET);
+        AusgewaehlteCharakter.Herze=AusgewaehlteCharakter.Herze+4;
+        System.out.println(ANSI_PURPLE+"Deine übriggebliebenen Herze "+ANSI_RESET+ANSI_RED+AusgewaehlteCharakter.Herze+ANSI_RESET);
+        System.out.println(ANSI_PURPLE+"Das Wesen hat sich dazu entschieden kdein Begleiter für deine Reise zu werden du kannst es bennenn: "+ANSI_RESET);
+        String VoidWesenName = Eingabe.nextLine();
+
+        System.out.println(ANSI_PURPLE+"Dein Begleiter heißt "+VoidWesenName+ANSI_RESET);
+        System.out.println(ANSI_PURPLE+"                               \\");
+                    System.out.println("                 .___             `.");
+                    System.out.println("    ___              `~\\           |               \\\\");
+                    System.out.println("  o~   `.               |         /'                |\\");
+                    System.out.println(".----._ `|             ,'       /'              _./'\\");
+                    System.out.println("`o     `\\|___       __,|----'~~~~T-----,__  _,'~\\");
+                    System.out.println("      /~~o   `~>-/|~ '   ' ,   '      '   ~~\\_\\");
+                    System.out.println("     |_      <~   |   ' ,   ' '   '  ' , '     \\\\");
+                    System.out.println("       `-...-'~\\./' '     '     '   '   '  , '  >\\");
+                    System.out.println("                 `-, __'  ,  '  '  , ' ,   '_,'-'\\");
+                    System.out.println("                   /'   `~~~~~~~|`--------~~\\\\");
+                    System.out.println("                 /'            ,'            `.\\");
+                    System.out.println("          ~~`---'             /               |\\");
+                    System.out.println("                           ,-'              _/'\\");
+                    HoelleDenTrankWegSchmeißen();
+    }
 
 
+    //Im Turm andere Spiel Area
+    public void VoidStoryMitMaedchenInDemTurm(){
+        System.out.println(ANSI_PURPLE+"Im Turm");
+    }
 
 
     //Passiert wenn man das Portal betritt
